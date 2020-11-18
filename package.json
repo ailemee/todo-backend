@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ailemee/todo-backend/issues"
   },
-  "homepage": "https://github.com/ailemee/todo-backend#readme"
+  "homepage": "https://github.com/ailemee/todo-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
