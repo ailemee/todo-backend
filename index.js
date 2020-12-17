@@ -6,6 +6,8 @@ app.use(cors());
 
 app.use(express.json());
 
+app.use(express.static("todo-app/build/"));
+
 // curl http://localhost:8080/todo
 app.get("/todo", (req, res) => {
   connection.findAll((result) => res.send(result));

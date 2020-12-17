@@ -6,6 +6,7 @@ function Todo({ todo, deleteTodo }) {
   return (
     <div className="todo">
       {todo.name}
+      <p>Priority: {todo.priority}</p>
       <div>
         <button onClick={() => deleteTodo(todo.id)}>Remove</button>
       </div>
@@ -61,11 +62,11 @@ function App() {
 
   console.log(todos);
   console.log(Array.isArray(todos));
-  let aaaaa = [];
+  let todoArray = [];
   const l = todos.length;
   for (let i = 0; i < l; i++) {
     const todo = todos[i];
-    aaaaa.push(
+    todoArray.push(
       <Todo
         key={todo.id}
         name={todo.name}
@@ -76,7 +77,7 @@ function App() {
     );
   }
 
-  // let aaaaa = todos.map((todo, id) => (
+  // let todoArray = todos.map((todo, id) => (
   //   <Todo
   //     key={id}
   //     id={id}
@@ -88,9 +89,10 @@ function App() {
 
   return (
     <div className="app">
+      <TodoForm addTodo={addTodo} />
       <div className="todo-list">
         {
-          aaaaa
+          todoArray
           /* {todos.map((todo) => (
           <Todo
             key={todos.id}
@@ -101,7 +103,6 @@ function App() {
           />
         ))} */
         }
-        <TodoForm addTodo={addTodo} />
       </div>
     </div>
   );
