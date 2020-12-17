@@ -12,24 +12,14 @@ app.get("/todo", (req, res) => {
 });
 
 // curl http://localhost:8080/todo/id
-<<<<<<< HEAD
 app.get("/todo/:id([0-9]+)", (req, res) => {
   const id = req.params.id;
-=======
-app.get("/todo/:taikaviitta([0-9]+)", (req, res) => {
-  const id = req.params.taikaviitta;
->>>>>>> master
   connection.findById(id, (todoItem) => res.send(todoItem));
 });
 
 // curl -X DELETE http://localhost:8080/todo/id
-<<<<<<< HEAD
 app.delete("/todo/:id([0-9]+)", (req, res) => {
   const id = req.params.id;
-=======
-app.delete("/todo/:taikaviitta([0-9]+)", (req, res) => {
-  const id = req.params.taikaviitta;
->>>>>>> master
   connection.deleteById(id, (todoItem) => res.send(todoItem));
 });
 
