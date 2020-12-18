@@ -51,6 +51,11 @@ function App() {
   const addTodo = async (id, priority) => {
     const newTodos = await APIRequests.addTodo(id, (priority = 1));
     setTodos([...todos, newTodos]);
+    const fetchTodoAndSetTodos = async () => {
+      const todos = await APIRequests.getAllTodos();
+      setTodos(todos);
+    };
+    fetchTodoAndSetTodos();
   };
 
   const deleteTodo = async (id) => {
