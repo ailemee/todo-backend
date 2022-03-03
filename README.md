@@ -1,8 +1,10 @@
 # Todo Application
 <img src=screenshot.png>
+
 # About this project
 This application was done as a fullstack project for React and Node.js courses in 2020. It utilizes SQL database to store user inputs to backend. User can add and delete tasks.
 The project can be accessed in Heroku from this url: https://tamk-4a00ez62-3002-group14.herokuapp.com/
+
 # Install instructions for local use
 1. Clone repository to your computer https://github.com/ailemee/todo-backend
 
